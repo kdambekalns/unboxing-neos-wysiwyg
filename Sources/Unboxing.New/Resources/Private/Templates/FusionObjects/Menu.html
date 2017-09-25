@@ -1,0 +1,12 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+{namespace ts=Neos\Fusion\ViewHelpers}
+
+<f:render section="itemsList" arguments="{items: items}" />
+
+<f:section name="itemsList">
+	<f:for each="{items}" as="item">
+		<neos:link.node node="{item.node}">
+			<div class="header__navigation-element">{item.label}</div>
+		</neos:link.node>
+	</f:for>
+</f:section>

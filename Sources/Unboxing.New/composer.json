@@ -1,0 +1,25 @@
+{
+    "name": "unboxing/new",
+    "description": "Demo site package, halfway done, workshop results",
+    "type": "neos-site",
+    "require": {
+        "neos/neos": "~3.2.0",
+        "neos/nodetypes": "~3.2.0",
+
+        "neos/seo": "~2.0"
+    },
+    "suggest": {
+        "neos/redirecthandler-neosadapter": "*",
+        "neos/redirecthandler-databasestorage": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Unboxing\\New\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Unboxing.New"
+        }
+    }
+}

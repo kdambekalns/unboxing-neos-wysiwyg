@@ -1,0 +1,37 @@
+{
+    "name": "flownative/unboxing-neos-wysiwyg-distribution",
+    "description": "Unboxing Neos results, neither complete, nor exciting",
+    "license": "GPL-3.0+",
+    "config": {
+        "vendor-dir": "Packages/Libraries",
+        "bin-dir": "bin",
+        "platform": {
+            "php": "7.0"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "Sources/Unboxing.New"
+        }
+    ],
+    "require": {
+        "unboxing/new": "dev-master"
+    },
+    "require-dev": {
+        "neos/buildessentials": "~4.2.0",
+        "mikey179/vfsstream": "~1.6",
+        "phpunit/phpunit": "~6.0.0",
+        "symfony/css-selector": "~2.0",
+        "neos/behat": "dev-master"
+    },
+    "suggest": {
+        "ext-pdo_sqlite": "For running functional tests out-of-the-box this is required"
+    },
+    "scripts": {
+        "post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-install-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-package-update": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
+        "post-package-install": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
+    }
+}

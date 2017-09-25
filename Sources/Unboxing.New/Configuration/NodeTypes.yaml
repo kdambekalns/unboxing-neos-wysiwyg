@@ -1,0 +1,52 @@
+'Unboxing.New:ContentSection':
+  superTypes:
+    'Neos.Neos:Content': true
+  childNodes:
+    content:
+      type: 'Neos.Neos:ContentCollection'
+  ui:
+    label: 'Content Section'
+    icon: 'icon-folder'
+    # anything from
+    # http://fontawesome.io/3.2.1/icons/
+    inspector:
+      groups:
+        section:
+          label: 'Section'
+          icon: 'icon-folder'
+  properties:
+    sectionType:
+      type: 'string'
+      defaultValue: 'contact'
+      ui:
+        label: 'Type'
+        reloadIfChanged: true
+        inspector:
+          group: 'section'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              contact:
+                label: 'Contact'
+              experience:
+                label: 'Experience'
+              features:
+                label: 'Features'
+              realizations:
+                label: 'Realizations'
+    title:
+      type: 'string'
+      ui:
+        inspector:
+          group: 'section'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Section Title'
+    subtitle:
+      type: 'string'
+      ui:
+        inspector:
+          group: 'section'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Section Subtitle'

@@ -1,0 +1,19 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+
+
+
+<section id="features" class="{sectionType}">
+    <div class="{sectionType}__wrapper">
+        <div class="section-header">
+            <div class="section-header__title  section-header__title--{sectionType}">
+                {neos:contentElement.editable(property: 'title')}
+            </div>
+            {neos:contentElement.editable(property: 'subtitle', class: 'section-header__subtitle', tag: 'span')}
+        </div>
+        <div class="{sectionType}__elements-wrapper">
+            <div class="{sectionType}__element">
+                {content -> f:format.raw()}
+            </div>
+        </div>
+    </div>
+</section>

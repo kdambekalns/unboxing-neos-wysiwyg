@@ -1,0 +1,13 @@
+
+
+
+
+
+
+
+
+prototype(Unboxing.New:ContentSection) < prototype(Neos.Neos:Content) {
+    content = Neos.Neos:ContentCollection {
+        nodePath = 'content'
+    }
+}
